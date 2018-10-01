@@ -171,7 +171,8 @@ public class mergesort { //merge sort is the english for 归并排序
         if(left >= right) return;
         int i = left, j = right;
         int pivot = nums[left];
-      while(i < j){
+      while(i <= j){
+          System.out.println(i + "  " + j);
           while(i < j && nums[j] >= pivot) j--;
           nums[i] = nums[j];//swap here  big
           while(i < j && nums[i] < pivot) i++;
@@ -196,7 +197,11 @@ public class mergesort { //merge sort is the english for 归并排序
 
     private int getPivot(int[] nums, int left, int right){
 
-        int pivot = nums[left];//mistake
+        int pivot = nums[left];// 选择左边的作为pivot,则就要跟j互换,才能保证i左边的都比pivot小,因为i ,j交错时候,
+        //  i 下一个值是一定大于pivot的(之前j走过这里符合逻辑,才 j--),而pivot在最左边(理论最小位置),
+        // 所以一定要跟j换才能保证挡板的理论符合,
+
+        //同理如果 是选right  = pivot则 最后swap 就是 跟i互换了
         int i = left + 1;
         int j = right;
 
@@ -207,10 +212,10 @@ public class mergesort { //merge sort is the english for 归并排序
             }else if(nums[j] >= pivot){
                 j--;
             }else
-               swap(nums, i , j--);
+               swap(nums, i++ , j--);
         }
-        swap(nums, --i, left);//why must be this? or ?
-        return i;
+        swap(nums, j, left);//why must be this? or ?
+        return j;//must be j too
     }
     private void swap(int[] nums, int idxa, int idxb){
         int temp = nums[idxa];
@@ -227,9 +232,9 @@ public class mergesort { //merge sort is the english for 归并排序
         mergesort t = new mergesort();
       //  t.sort(array, temp, 0, array.length - 1);  //(input array,low,high,temp[])
 
-        t.quickSort(array1, 0, array1.length - 1);
-        // t.mysort(array, 0 ,array.length - 1);
-        System.out.println(Arrays.toString(array1));
+        //t.quickSort(array1, 0, array1.length - 1);
+         t.mysort(array, 0 ,array.length - 1);
+        System.out.println(Arrays.toString(array));
 
     }
 

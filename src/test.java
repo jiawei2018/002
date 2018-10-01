@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Vector;
 
 public class test {
@@ -13,9 +15,16 @@ public class test {
 //        System.out.println("====");
 //        System.out.println(18 / 9+" <>  " +18/3*3);
         HashSet<Integer> t1 = new HashSet<>();
+        List<Integer> l = new ArrayList<>();
+        l.add(1);
+        l.add(2);
+        l.add(3);
 
-        String s = "123";
-        System.out.println(s.substring(0,2));
+        t1.addAll(l);
+        System.out.println(t1 + "  caonima");
+
+//        String s = "123";
+//        System.out.println(s.substring(0,2));
        // System.out.println(s.charAt(0));
        // System.out.println(s.charAt(3));
 //        boolean[] n = new boolean[1] ;
@@ -40,7 +49,15 @@ public class test {
   //
         //      System.out.println(j);
 
-      //  System.out.println(1 << 4);
+      //  System.out.println(1 << 4)
+
+        System.out.println(-4 % 2    );
+//        for(int i = 0; i < 5; i++){
+//            System.out.println(i);
+//        }
+//        for(int i = 0; i <= 5; i++){
+//            System.out.println(i + " <<");
+//        }
     }
 
     private void test001(){

@@ -60,13 +60,16 @@ public class populatingNextRightPointersInEachNode_116 {
 
         }
 
-//        private void recur(TreeLinkNode root, int lvl, int idx){
-//            if(lvl == 0) root.next = null;
-//            if(lvl != 0 && idx == (int)Math.pow(lvl, idx - 1)) root.next = null;
-//
-//
-//
-//
-//        }
+    public void connectB(TreeLinkNode root) {
+        if(root == null) return;
+        if(root.left != null){//because perfect binary tree
+            root.left.next = root.right;
+        }
+        if(root.right != null && root.next != null){
+            root.right.next = root.next.left;
+        }
+        connectB(root.left);
+        connectB(root.right);
+    }
 
 }

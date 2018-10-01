@@ -30,8 +30,8 @@ public class POW_x_n_050 {
     public double myPow(double x, int n) {
 
         //关键是1递归的二分法,
-        if (n == 0) return 1;
-        if (n == 1) return x;
+        if (n == 0) return 1;//这就是base case  惊人额简单才是正道理!!!!!!!!!!!!!!!
+        //if (n == 1) return x; //这句是废话, 又一次 说明 我的递归理解还差的远
 
         double tmp = myPow(x, (n / 2));//必须这样写,否则会递归两次
 
@@ -40,7 +40,8 @@ public class POW_x_n_050 {
         } else if (n > 0) {
             return tmp * tmp * x;
         } else { //if(n < 0)
-            return tmp * tmp *(1/ x);//这句需要解释  tmp * tmp * 1/x ??
+            return tmp * tmp *(1 / x);//这句需要解释  tmp * tmp * 1/x ??
+            //递归最终会干到0, 所以 返回了1
             // 此题的关键一个是  tmp = myPow(x, (n / 2))  另一个就是 负指数的处理
             //还应该注意到intde max_value 比min_value 绝对值要小1  !!!!
         }
@@ -138,7 +139,7 @@ public class POW_x_n_050 {
 
     public static void main(String[] args){
         double i = 2.0;
-        int j = -2;
+        int j = -4;
         POW_x_n_050 t = new POW_x_n_050();
 
         System.out.println(t.myPow(i,j));

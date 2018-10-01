@@ -44,6 +44,35 @@ public class populatingNextRightPointersInEachNode_II_117 {
       TreeLinkNode(int x) { val = x; }
   }
         public void connect(TreeLinkNode root) {
+            if(root == null) return;
+            TreeLinkNode nextnode = root.next;
+            TreeLinkNode downnext = null;//next lvl next node
+            // rootNext如果是null说明已经处理完这一层的所有node
+            // next不等于null说明找到了找到最左边的下一个被连接的对象
+
+            while(nextnode != null && downnext == null){
+                if(nextnode.left != null){ // left first
+                    downnext = nextnode.left;
+                    break;
+                } else if(nextnode.right != null){
+                    downnext = nextnode.right;
+                    break;
+                }else
+                    nextnode = nextnode.next;
+
+            }
+
+            if(root.left != null){
+                if(root.right != null) root.left.next = root.right; // inter tree connect
+                else root.left.next = downnext;
+            }
+
+            if(root.right != null){
+                root.right.next = downnext; // cross tree connect
+            }
+
+            connect(root.right);//must right first!!!!!!!!!! // 要先让右边都先连起来
+            connect(root.left);
 
         }
 }
