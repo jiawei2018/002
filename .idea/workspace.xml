@@ -85,8 +85,8 @@
       <file leaf-file-name="surroundedRegions_130.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/a010/surroundedRegions_130.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+            <state relative-caret-position="453">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
             </state>
           </provider>
         </entry>
@@ -231,11 +231,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="81" />
-    <option name="y" value="450" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="-83" />
+    <option name="y" value="34" />
     <option name="width" value="1844" />
-    <option name="height" value="1040" />
+    <option name="height" value="1021" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -922,8 +922,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/a010/surroundedRegions_130.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+        <state relative-caret-position="453">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
     </entry>
